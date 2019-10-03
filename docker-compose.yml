@@ -1,0 +1,11 @@
+version: '3'
+services:
+  subsonic:
+    build: .
+    volumes:
+      - ./music:/music:ro
+      - ./podcast:/podcast:z
+      - ./playlist:/playlist:z
+      - ./subsonic:/subsonic:z
+    ports:
+      - "4040:4040"
